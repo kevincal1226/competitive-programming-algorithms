@@ -14,9 +14,6 @@ class SegmentTree {
     SegmentTree(Iterator begin, Iterator end, Merge merge = Merge())
         : _merge(merge), _n(std::distance(begin, end)), _data(_n * 4) {
         build(begin, 1, 0, _n - 1);
-        // for (auto &x : _data) {
-        //     std::println("{}", x);
-        // }
     }
 
     T query(size_t l, size_t r);
